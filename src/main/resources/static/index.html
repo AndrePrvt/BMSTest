@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestBMS">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BMS Test app</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">BMS Test app</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/messages">messages</a></li>
+            <li><a href="/info">info</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+   <div class="container">
+      <div ng-view></div>
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="/js/lib/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/lib/vkBeautify/vkbeautify.0.99.00.beta.js"></script>
+
+
+    <!--application dependencies-->
+    <script type="text/javascript" src ="js/TestBMS.js"></script>
+    <script type="text/javascript" src="js/controllers/InfoController.js"></script>
+    <script type="text/javascript" src="js/services/MainService.js"></script>
+    <script type="text/javascript" src="js/controllers/MessageController.js"></script>
+  `
+
+  </body>
+</html>

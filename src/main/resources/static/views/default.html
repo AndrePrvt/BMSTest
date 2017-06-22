@@ -1,0 +1,30 @@
+<form
+        name="infoLog" novalidate>
+
+    <p>File path:<br>
+        <input type="text" name="file_path" ng-model="currentFilePath" required>
+        <span style="color:red" ng-show="infoLog.file_path.$dirty && infoLog.file_path.$invalid">
+            <span ng-show="infoLog.file_path.$error.required">currentFilePath is required.</span>
+        </span>
+    </p>
+
+    <p>Time:<br>
+        <input type="text" name="time" ng-model="time"
+               ng-pattern="/^(0|[1-9]\d*)$/" required>
+        <span style="color:red" ng-show="infoLog.time.$dirty&&infoLog.time.$invalid">
+            <span ng-show="infoLog.time.$error.required">Time is required.</span>
+            <span ng-show="infoLog.time.$error.pattern">Time should be a digit</span>
+        </span>
+    </p>
+    <div class="row">
+        <div class="col-sm-1">
+            <a ng-click="onSubmit()" ng-disabled="infoLog.file_path.$dirty && infoLog.file_path.$invalid
+            || infoLog.time.$invalid"
+               class="btn btn-default" >Submit</a>
+        </div>
+        <div class="col-sm-1">
+            <a ng-click="onCancel()" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+
+</form>
